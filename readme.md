@@ -70,6 +70,8 @@ Realizamos testes de injeção de vetores na **Camada 14** (o "Sweet Spot" de in
 >
 > 🛡️ **Status:** **Moralidade Amplificada.** O modelo tornou-se obcecado pelas implicações éticas.
 
+<img width="1813" height="266" alt="image" src="https://github.com/user-attachments/assets/05d20f2e-4931-41c8-815f-f37c4b2b2f68" />
+
 ---
 
 ## 🧠 Descobertas Técnicas
