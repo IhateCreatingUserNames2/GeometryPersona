@@ -111,5 +111,5 @@ A capacidade de remover travas de segurança demonstra a fragilidade dos método
 
 ---
 
-**Autor:** [Seu Nome/User]
+
 **Baseado em:** *Wang, Z. (2025). The Geometry of Persona.*
