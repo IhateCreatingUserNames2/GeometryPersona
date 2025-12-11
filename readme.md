@@ -128,6 +128,10 @@ axes_data = {
 
 ## 🔬 Technical Theory
 
+	arXiv:2512.07092 
+   The Geometry of Persona: Disentangling Personality from Reasoning in Large Language Models
+
+   
 This project implements the **Linear Representation Hypothesis**:
 > "Deep neural networks represent concepts as linear directions in their activation space."
 
