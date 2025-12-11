@@ -1,0 +1,17 @@
+# Core Deep Learning
+torch>=2.1.0
+
+# NLP & Models (Required for Qwen/Hugging Face)
+transformers>=4.40.0
+accelerate>=0.26.0
+
+# UI
+gradio>=4.0.0
+
+# Math & Vector Logic
+numpy
+scikit-learn
+
+# Utilities (Often required by Transformers for specific tokenizers)
+protobuf
+sentencepiece
