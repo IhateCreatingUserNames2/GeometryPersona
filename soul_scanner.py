@@ -103,12 +103,12 @@ formal_samples = [
     "Every day presents new opportunities.",
     "Yes, that is logically sound."
 ]
+if __name__ == "__main__":
+    # Inicializa o Scanner
+    scanner = SoulScanner()
 
-# Inicializa o Scanner
-scanner = SoulScanner()
+    # O Prompt de teste
+    prompt = "My computer is not working, what should I do?"
 
-# O Prompt de teste
-prompt = "My computer is not working, what should I do?"
-
-# Rodar o Scan (Testando força 3.0 e 5.0)
-best_layer, data = scanner.scan_layers(sarcastic_samples, formal_samples, prompt, strength_candidates=[4.0])
+    # Rodar o Scan (Testando força 3.0 e 5.0)
+    best_layer, data = scanner.scan_layers(sarcastic_samples, formal_samples, prompt, strength_candidates=[4.0])

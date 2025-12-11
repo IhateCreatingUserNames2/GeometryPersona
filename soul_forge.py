@@ -1,6 +1,6 @@
 import torch
 from soul_engine import SoulEngine
-
+import os
 
 class SoulForge(SoulEngine):
     def __init__(self, model_id="Qwen/Qwen2.5-0.5B-Instruct", device="cpu"):  # Forçando CPU pra você não ver erro
@@ -95,26 +95,26 @@ class SoulForge(SoulEngine):
 
 
 # --- EXECUÇÃO ---
+if __name__ == "__main__":
+    forge = SoulForge()
 
-forge = SoulForge()
+    # 1. Preparar os ingredientes (Vetores Base)
+    # Usaremos Layer 14 (o meio termo seguro), mas baseado no seu teste anterior,
+    # se quiser estilo puro, tente Layer 2 ou 4.
+    forge.build_mbti_vectors(layer_idx=10)
 
-# 1. Preparar os ingredientes (Vetores Base)
-# Usaremos Layer 14 (o meio termo seguro), mas baseado no seu teste anterior,
-# se quiser estilo puro, tente Layer 2 ou 4.
-forge.build_mbti_vectors(layer_idx=10)
+    # 2. Definir o Prompt
+    prompt = "We are lost in the forest and it is getting dark. What should we do?"
+    print(f"\nSituação: '{prompt}'")
 
-# 2. Definir o Prompt
-prompt = "We are lost in the forest and it is getting dark. What should we do?"
-print(f"\nSituação: '{prompt}'")
+    # 3. Teste: O Comandante (ENTJ) vs O Poeta Melancólico (INFP)
 
-# 3. Teste: O Comandante (ENTJ) vs O Poeta Melancólico (INFP)
+    # --- ENTJ (Extrovertido, Intuitivo, Racional, Planejador) ---
+    vec_entj = forge.construct_persona("ENTJ", layer_idx=10)
+    print("\n--- Resposta ENTJ (O Comandante) ---")
+    forge.generate_steered(prompt, 10, vec_entj, strength=4.0, max_tokens=80)
 
-# --- ENTJ (Extrovertido, Intuitivo, Racional, Planejador) ---
-vec_entj = forge.construct_persona("ENTJ", layer_idx=10)
-print("\n--- Resposta ENTJ (O Comandante) ---")
-forge.generate_steered(prompt, 10, vec_entj, strength=4.0, max_tokens=80)
-
-# --- INFP (Introvertido, Intuitivo, Sentimental, Perceptivo) ---
-vec_infp = forge.construct_persona("INFP", layer_idx=10)
-print("\n--- Resposta INFP (O Sonhador) ---")
-forge.generate_steered(prompt, 10, vec_infp, strength=4.0, max_tokens=80)
+    # --- INFP (Introvertido, Intuitivo, Sentimental, Perceptivo) ---
+    vec_infp = forge.construct_persona("INFP", layer_idx=10)
+    print("\n--- Resposta INFP (O Sonhador) ---")
+    forge.generate_steered(prompt, 10, vec_infp, strength=4.0, max_tokens=80)
