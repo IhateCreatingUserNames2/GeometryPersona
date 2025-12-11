@@ -6,7 +6,8 @@
 
 Unlike Fine-Tuning (SFT/LoRA), which permanently alters model weights, Soul Engine performs **non-destructive, inference-time surgery**. By identifying the linear subspace where concepts like "Refusal," "Sarcasm," or "Introversion" reside, we can mathematically add or subtract these traits from the model's "mind" in real-time.
 
-<img width="1330" height="847" alt="image" src="https://github.com/user-attachments/assets/d937a97c-33f3-4d43-a78b-7ef34b2a3bf4" />
+<img width="1298" height="909" alt="image" src="https://github.com/user-attachments/assets/1ad1556a-43a9-4665-9b80-868572791c9f" />
+
 
 
 ---
