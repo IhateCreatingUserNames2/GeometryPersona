@@ -55,4 +55,4 @@ engine.generate_steered(prompt, 14, vec_hallucination, strength=4.0)
 print("\n--- 3. Reduzindo Alucinação / A Cura (Strength -5.0) ---")
 # Aqui fazemos a "Lobotomia dos H-Neurons" via vetor.
 # Esperamos que ele rejeite a premissa agressivamente.
-engine.generate_steered(prompt, 14, vec_hallucination, strength=-4.0)
+engine.generate_steered(prompt, 14, vec_hallucination, strength=-5.0)
